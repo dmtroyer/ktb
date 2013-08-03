@@ -1,0 +1,17 @@
+Search: <input ng-change="updateScope()" ng-model="search" placeholder="Enter an artist, panel or location id...">
+<ul>
+  <li ng-cloak ng-repeat="panel in panels.installed_panel_set | filter:search">
+    <a ng-href="#/panels/{{panel.pnl_id | strip_panel_id}}"><img ng-cloak ng-src="{{panel.image}}" /></a>
+    <ul>
+      <li ng-cloak>Panel Id: {{panel.pnl_id | strip_panel_id}}</li>
+      <li ng-cloak>Artists:</li>
+        <ul>
+          <li ng-cloak ng-repeat="artist in panel.created_by">{{artist}}</li>
+        </ul>
+      <li ng-cloak>loc_id: {{panel.loc_id}}</li>
+      <li ng-cloak>loc_no: {{panel.loc_no}}</li>
+      <li ng-cloak>loc_side: {{panel.loc_side}}</li>
+      <li ng-cloak>orientation: {{panel.orientation}}</li>
+    </ul>
+  </li>
+</ul>
