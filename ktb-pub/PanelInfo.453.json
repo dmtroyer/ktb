@@ -1,5 +1,10 @@
 {
-  "created_by": "<p>Panel created by: <strong>Amanda Gross</strong></p>",
+  "artist_set": [
+    {
+      "count": 1,
+      "name": "Amanda Gross"
+    }
+  ],
   "loc_id": "Down-61 (Outer)",
   "loc_info": "<ul>\r\n<li>KtB Location ID: <strong>Down-61 (Outer)</strong></li>\r\n<li>oriented to the <strong>outside</strong>, meaning best viewed from the Clemente (6th Street) Bridge</li>\r\n<li>on the <strong>down-river</strong> side of the bridge (the side facing 6th street and PNC Park)</li>\r\n<li>61/149 (<strong>41%</strong>) of the way across the bridge (starting from the Downtown end)</li>\r\n<li>closest marker: <strong>Streetlight B1-12</strong>, which is 2 spaces closer to North Shore</li>\r\n<li>closest landmark: <strong>Below an Andy Warhol hanging banner</strong>, which is 18 panels closer to Downtown</li>\r\n</ul>",
   "pnl_id": "PNL00453",

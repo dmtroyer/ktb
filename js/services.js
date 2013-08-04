@@ -9,5 +9,5 @@ angular.module('ktb.services.panels', ['ngResource']).
     });
   }).
   factory('Panel', function($resource) {
-    return $resource('../ktb-pub/PanelInfo.:panelId.json');
+    return $resource('ktb-pub/PanelInfo.:panelId.json');
   });

@@ -6,7 +6,7 @@ Search: <input ng-change="updateScope()" ng-model="search" placeholder="Enter an
       <li ng-cloak>Panel Id: {{panel.pnl_id | strip_panel_id}}</li>
       <li ng-cloak>Artists:</li>
         <ul>
-          <li ng-cloak ng-repeat="artist in panel.created_by">{{artist}}</li>
+          <li ng-cloak ng-repeat="artist in panel.artist_set">{{artist.name}}</li>
         </ul>
       <li ng-cloak>loc_id: {{panel.loc_id}}</li>
       <li ng-cloak>loc_no: {{panel.loc_no}}</li>

@@ -4,9 +4,10 @@
     <li ng-cloak>Panel Id: {{panel.pnl_id | strip_panel_id}}</li>
     <li ng-cloak>Artists:</li>
       <ul>
-        <li ng-cloak ng-repeat="artist in panel.created_by">{{artist}}</li>
+        <li ng-cloak ng-repeat="artist in panel.artist_set">{{artist.name}}</li>
       </ul>
     <li ng-cloak>Location: {{panel.loc_id}}</li>
+    <div ng-bind-html-unsafe="panel.loc_info"></div>
   </ul>
   <h2>Story</h2>
   <div ng-bind-html-unsafe="panel.story"></div>

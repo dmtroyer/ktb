@@ -1,22 +1,40 @@
 {
   "installed_panel_set": [
     {
+      "artist_set": [
+        {
+          "count": 1,
+          "name": "Amanda Gross"
+        }
+      ],
       "loc_id": "D61",
       "loc_no": 61,
       "loc_side": "Down",
       "orientation": "Outer",
       "pnl_id": "PNL00453",
-      "pnl_pk": "5032C15C095843E596856224EA269CCF",
-      "created_by": "<p>Panel created by: <strong>Amanda Gross</strong></p>"
+      "pnl_pk": "5032C15C095843E596856224EA269CCF"
     },
     {
+      "artist_set": [
+        {
+          "count": 1,
+          "name": "Holly Uhlhorn"
+        },
+        {
+          "count": 1,
+          "name": "Katie Salisbury"
+        },
+        {
+          "count": 1,
+          "name": "Melanie Kachmar"
+        }
+      ],
       "loc_id": "U137",
       "loc_no": 137,
       "loc_side": "Up",
       "orientation": "Inner",
       "pnl_id": "PNL00544",
-      "pnl_pk": "B4378CF4BE024CF18F7937425511A07E",
-      "created_by": "<p>Pieces created by:</p><ul><li><strong>Melanie Kachmar</strong></li><li><strong>Holly Uhlhorn</strong></li><li><strong>Holly Uhlhorn</strong></li><li><strong>Katie Salisbury</strong></li></ul>"
+      "pnl_pk": "B4378CF4BE024CF18F7937425511A07E"
     }
   ]
 }
