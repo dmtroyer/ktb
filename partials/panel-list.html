@@ -1,4 +1,4 @@
-Search: <input ng-change="updateScope()" ng-model="search" placeholder="Enter an artist, panel or location id...">
+Search: <input ng-change="updateScope()" ng-model="search" placeholder="Enter an artist, panel or location id..." autofocus>
 <ul>
   <li ng-cloak ng-repeat="panel in panels.installed_panel_set | filter:search">
     <a ng-href="#/panels/{{panel.pnl_id | strip_panel_id}}"><img ng-cloak ng-src="{{panel.image}}" /></a>

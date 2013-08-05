@@ -2,7 +2,7 @@
 
 /* Services */
 
-angular.module('ktb.services.panels', ['ngResource']).
+angular.module('ktb.services', ['ngResource']).
   factory('Panels', function($resource) {
     return $resource('ktb-pub/installedPanelsFiltered.json', {}, {
       query: { method: 'GET', isArray: false }
