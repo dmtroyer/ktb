@@ -12,12 +12,28 @@ angular.module('ktb.controllers', []).
       });
     });
   }]).
-  controller('PanelDetailCtrl', ['$scope', '$routeParams', 'Panel', function($scope, $routeParams, Panel) {
-    var panel = Panel.get({panelId:$routeParams.panelId}, function() {
+  controller('PanelDetailCtrl', ['$scope', '$location', '$routeParams', 'Panel', function($scope, $location, $routeParams, Panel) {
+    Panel.get({panelId:$routeParams.panelId}, function(panel) {
       panel.image = panelImageUrl(panel.pnl_id);
-      panel.story = "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eget risus id urna sollicitudin facilisis. Proin et blandit turpis. Fusce ornare lobortis est, id viverra eros convallis a. Aenean blandit ipsum quis condimentum vestibulum. Nulla non metus leo. Suspendisse eu gravida nunc, eu commodo turpis. Sed vitae euismod neque.</p><p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nunc et velit posuere neque interdum semper. Mauris faucibus lectus rhoncus quam laoreet, id mollis enim tristique. Quisque sit amet nulla eget dui tempus malesuada a at risus. Integer in massa non quam adipiscing congue. Nullam condimentum erat in mauris ultrices, non posuere turpis feugiat. Suspendisse at velit commodo, condimentum purus eget, malesuada lorem. Duis vel ante hendrerit, tincidunt lacus id, tempus odio. Sed vehicula eget erat ut lacinia. Vivamus eget porta magna, at venenatis purus. Praesent elementum orci eget enim ultrices dignissim scelerisque vitae turpis.</p>";
+      if (panel.story == null) { panel.story = defaultStory(panel.pnl_id.slice(-3)); }
+      $scope.panel = panel;
     });
-    $scope.panel = panel;
+
+    $scope.loadDisqus = function() {
+      window.disqus_shortname = 'knitthebridge'; // required: replace example with your forum shortname
+      window.disqus_identifier = $location.path();
+      window.disqus_url = 'http://mobile.knitthebridge.com/#' + $location.path();
+      window.disqus_title = 'Panel ' + $location.path().slice(-3);
+      console.log('Title: ' + window.disqus_title);
+      console.log('Url: ' +window.disqus_url);
+
+      // * * DON'T EDIT BELOW THIS LINE * *
+      (function() {
+          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+          dsq.src = '//knitthebridge.disqus.com/embed.js';
+          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+    };
   }]).
   controller('AppCtrl', ['$scope', '$location', function($scope, $location) {
     $scope.submit = function () {
@@ -34,4 +50,10 @@ angular.module('ktb.controllers', []).
 
 function panelImageUrl(id) {
   return "http://www.knitthebridge.com/ktb-photos/panels/0/" + id + "/" + id + "_main.jpeg";
+}
+
+function defaultStory(panelId) {
+  var story = "<p>Are you the artist of this panel? Do you have a story you want to tell?</p>";
+  story += "<p><a href=\"mailto:knitthebridge+story@gmail.com?subject=Story for Panel " + panelId + "\">Email Us</a></p>";
+  return story;
 }

@@ -10,5 +10,9 @@
     <div ng-bind-html-unsafe="panel.loc_info"></div>
   </ul>
   <h2>Story</h2>
-  <div ng-bind-html-unsafe="panel.story"></div>
+  <p ng-bind-html-unsafe="panel.story"></p>
+</div>
+<div id="disqus" class="disqus">
+  <h2>Discussion</h2>
+  <div ng-include="'partials/disqus'" id="disqus_thread" onload="loadDisqus(panel.pnl_id)"></div>
 </div>
