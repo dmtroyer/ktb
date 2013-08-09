@@ -1,0 +1,116 @@
+.list-container {
+  background: rgb(212, 212, 212);
+  text-align: center;
+}
+
+.list-search input {
+  width: 100%;
+}
+
+.list {
+  padding: 15px;
+}
+
+.list-header {
+  background: rgb(144, 64, 174);
+  font-family: sans-serif;
+  font-size: 0.75em;
+  text-align: center;
+}
+
+.list-header h1 {
+  margin: 0;
+  color: white;
+}
+
+.list-panel {
+  background: white;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  margin-bottom: 15px;
+}
+
+.splash {
+  background: transparent url('../images/1D67FA0E-CCA6-4CC4-940E-F2244EF0799B.png') no-repeat fixed center;
+  text-align: center;
+  background-size: cover;
+}
+
+.splash-banner {
+  width: 100%;
+  padding-top: 3em;
+  padding-bottom: 20%;
+}
+
+.splash-banner-head {
+  margin-top: 0;
+  margin-bottom: 0.5em;
+  font-family: 'Oxygen', sans-serif;
+  font-size: 5em;
+  font-weight: 700;
+  color: white;
+  text-shadow: 0 2px 2px black;
+}
+
+.splash-buttons {
+  text-align: center;
+  font-weight: 100;
+}
+
+.splash-button-label {
+  display: block;
+  font-family: helvetica;
+  font-size: 3em;
+  text-decoration: none;
+  padding: 1em 0 1em;
+  color: #fff;
+}
+
+.splash-button-explore {
+  background: rgb(42, 128, 186);
+}
+
+.splash-button-about {
+  background: rgb(144, 64, 174);
+}
+
+.splash-footer {
+  background: white;
+  font-size: 1em;
+  border: 1px solid black;
+}
+
+.splash-footer-label {
+  display: block;
+  font-family: helvetica;
+  text-decoration: none;
+  padding: 1em 0 1em;
+  color: black;
+}
+
+/*
+ * -- TABLET MEDIA QUERIES --
+ * On tablets, we want to slightly adjust the size of the banner
+ * text and add some vertical space between the various pricing tables
+ */
+@media(max-width: 767px) {
+
+}
+
+/*
+ * -- PHONE MEDIA QUERIES --
+ * On phones, we want to reduce the height and font-size of the banner further
+ */
+@media (max-width: 480px) {
+  .splash-banner-head {
+    font-size: 4em;
+  }
+  .splash-button-label {
+    font-size: 2em;
+  }
+  .splash-footer {
+    font-size: 0.75em;
+  }
+}
