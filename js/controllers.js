@@ -42,12 +42,9 @@ angular.module('ktb.controllers', []).
   }]).
   controller('AppCtrl', ['$scope', '$location', function($scope, $location) {
     $scope.submit = function () {
-      $scope.search = this.search;
+      $scope.search = this.search_input;
+      $scope.search_input = this.search_input;
       $location.url('panels');
-    };
-
-    $scope.updateScope = function () {
-      $scope.search = this.search;
     };
   }]);
 

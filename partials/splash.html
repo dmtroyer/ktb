@@ -1,22 +1,20 @@
-<div class="splash">
-  <div class="splash-banner">
-    <h1 class="splash-banner-head">Knit the Bridge</h1>
-    <div class="splash-search">
+<div class="container splash-container">
+  <div class="top">
+    <h1 class="main-title"><a href="#/">Knit the Bridge</a></h1>
+    <div class="search">
       <form ng-submit="submit()">
-        <input type="text" ng-model="search" name="search" placeholder="Enter an artist, panel or location id...">
-        <button type="submit">Search</button>
-     </form>
+        <input type="text" ng-model="search_input" placeholder="Enter an artist, location ID, or panel ID">
+        <button type="submit" class="btn btn-main btn-search">Search</button>
+      </form>
     </div>
   </div>
-  <div class="splash-buttons pure-g-r" data-role="footer">
-    <div class="splash-button-explore pure-u-1-2">
-      <a class="splash-button-label" href="#/panels">Explore the Bridge</a>
+  <div class="main-links">
+    <div class="main-nav">
+      <a class="btn btn-green btn-main" href="#/panels">Explore the Bridge</a>
+      <a class="btn btn-blue btn-main" href="#/about">About</a>
     </div>
-    <div class="splash-button-about pure-u-1-2">
-      <a class="splash-button-label" href="about">About</a>
-    </div>
-    <div class="splash-footer pure-u-1">
-      <a class="splash-footer-label" href="http://fiberartspgh.org/">Project of the Fiberarts Guild of Pittsburgh</a>
+    <div class="footer">
+      <a href="http://fiberartspgh.org/">Project of the Fiberarts Guild of Pittsburgh</a>
     </div>
   </div>
 </div>

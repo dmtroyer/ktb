@@ -1,116 +1,236 @@
-.list-container {
-  background: rgb(212, 212, 212);
-  text-align: center;
+#_blr-feedback-tab {
+  display: none;
 }
 
-.list-search input {
-  width: 100%;
+* {
+  box-sizing: border-box;
 }
 
-.list {
-  padding: 15px;
-}
-
-.list-header {
-  background: rgb(144, 64, 174);
-  font-family: sans-serif;
-  font-size: 0.75em;
-  text-align: center;
-}
-
-.list-header h1 {
+body {
+  font-family: 'Open Sans', sans-serif;
   margin: 0;
-  color: white;
-}
-
-.list-panel {
-  background: white;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
-  margin-bottom: 15px;
-}
-
-.splash {
-  background: transparent url('../images/1D67FA0E-CCA6-4CC4-940E-F2244EF0799B.png') no-repeat fixed center;
-  text-align: center;
+  background: url('../images/1D67FA0E-CCA6-4CC4-940E-F2244EF0799B.png') 0 0 fixed no-repeat;
   background-size: cover;
 }
 
-.splash-banner {
+a {
+  color: #0088cc;
+}
+
+.container {
+  position: absolute;
+  top: 0;
   width: 100%;
-  padding-top: 3em;
-  padding-bottom: 20%;
 }
 
-.splash-banner-head {
-  margin-top: 0;
-  margin-bottom: 0.5em;
-  font-family: 'Oxygen', sans-serif;
-  font-size: 5em;
-  font-weight: 700;
-  color: white;
-  text-shadow: 0 2px 2px black;
+.container.splash-container {
+  right: 0;
+  left: 0;
+  bottom: 0;
 }
 
-.splash-buttons {
-  text-align: center;
-  font-weight: 100;
+.container.about-container .main-links,
+.container.panels-container .main-links {
+  position: relative;
+  top: auto;
+  right: auto;
+  bottom: auto;
+  left: auto;
+  margin-top: 50px;
 }
 
-.splash-button-label {
+.about.panel {
+  margin-top: 20px;
+  padding: 5px 15px 15px 15px;
+}
+
+.about .img {
+  color: #666;
+  text-align: right;
+}
+
+.main-links .search {
+  margin-bottom: 30px;
+}
+
+
+.btn {
+  border: 0;
+  margin: 0;
+  cursor: pointer;
+  transition: background 0.1s;
+}
+
+.btn-main {
+  padding: 5% 2em;
   display: block;
-  font-family: helvetica;
-  font-size: 3em;
-  text-decoration: none;
-  padding: 1em 0 1em;
+  font-size: 1.5em;
+  width: 100%;
+  font-weight: bold;
   color: #fff;
+  text-align: center;
 }
 
-.splash-button-explore {
-  background: rgb(42, 128, 186);
-}
-
-.splash-button-about {
-  background: rgb(144, 64, 174);
-}
-
-.splash-footer {
-  background: white;
-  font-size: 1em;
-  border: 1px solid black;
-}
-
-.splash-footer-label {
-  display: block;
-  font-family: helvetica;
+a.btn-main {
   text-decoration: none;
-  padding: 1em 0 1em;
-  color: black;
 }
 
-/*
- * -- TABLET MEDIA QUERIES --
- * On tablets, we want to slightly adjust the size of the banner
- * text and add some vertical space between the various pricing tables
- */
-@media(max-width: 767px) {
-
+.footer {
+  text-align: center;
+  padding: 5px;
+  font-size: 0.8em;
+  line-height: 0.8em;
+  background: white;
 }
 
-/*
- * -- PHONE MEDIA QUERIES --
- * On phones, we want to reduce the height and font-size of the banner further
- */
-@media (max-width: 480px) {
-  .splash-banner-head {
-    font-size: 4em;
+.btn-blue {
+  background: #2D72DA;
+}
+.btn-blue:hover {
+  background: #4F8CE7;
+}
+
+.btn-purple {
+  background: purple;
+}
+.btn-purple:hover {
+  background: #B151B1;
+}
+
+.btn-green {
+  background: #008048;
+}
+.btn-green:hover {
+  background: #219462;
+}
+
+.main-links {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.main-title {
+  text-align: center;
+  font-size: 4em;
+  text-shadow: 1px 1px 5px #000;
+}
+.main-title a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.search {
+  margin: 0 5%;
+}
+.search input {
+  font-family: 'Open Sans Condensed';
+  font-size: 1.5em;
+  padding: 10px;
+  display: block;
+  width: 100%;
+  margin: 0;
+  border: 0;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+.btn-search {
+  color: #fff;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  background: #A0A0A0;
+}
+.btn-search:hover {
+  background: #C0C0C0;
+}
+
+.panels-list {
+  list-style-type: none;
+  margin: 30px 0 0 0;
+  padding: 0;
+}
+.panel {
+  background: #fff;
+  margin: 0 5% 30px 5%;
+  border-radius: 8px;
+  box-shadow: 0 3px 6px #666;
+}
+.panel a {
+  text-decoration: none;
+}
+.panel img {
+  width: 110%;
+  margin-left: -5%;
+  padding-top: 15px;
+}
+.panel-info {
+  padding: 15px;
+  color: #000;
+}
+.panel-info-byline {
+  color: #555;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+@media (max-width: 940px) {
+  .btn-main {
+    padding-top: 7%;
+    padding-bottom: 7%;
   }
-  .splash-button-label {
+  .btn-search {
+    padding-top: 3%;
+    padding-bottom: 3%;
+  }
+  .main-title {
+    font-size: 3em;
+    margin-bottom: 1em;
+  }
+  .search input,
+  .btn-main {
+    font-size: 1.25em;
+  }
+}
+
+@media (max-width: 640px) {
+  .btn-search {
+    padding-top: 4%;
+    padding-bottom: 4%;
+  }
+  .btn-main {
+    padding-top: 4%;
+    padding-bottom: 4%;
+  }
+  .main-title {
     font-size: 2em;
   }
-  .splash-footer {
-    font-size: 0.75em;
+  .search input,
+  .btn-main {
+    font-size: 1em;
+  }
+}
+
+@media (orientation:landscape) {
+  .main-links {
+    position: relative;
+    top: auto;
+    right: auto;
+    bottom: auto;
+    left: auto;
+    margin-top: 50px;
+  }
+  .btn-main {
+    padding-top: 5%;
+    padding-bottom: 5%;
+  }
+  .btn-search {
+    padding-top: 2%;
+    padding-bottom: 2%;
   }
 }
