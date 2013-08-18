@@ -8,6 +8,7 @@ angular.module('ktb.controllers', []).
       $scope.panels.installed_panel_set.map(function(panel) {
         delete panel.pnl_pk;
         panel.image = panelImageUrl(panel.pnl_id);
+        panel.loc = panel.loc_id.substr(0,1) + "-" + panel.loc_id.substr(1);
         panel.loc_side = panel.loc_side == "Down" ? "downriver" : "upriver";
         panel.orientation = panel.orientation == "Outer" ? "outside" : "inside";
         panel.artists = panel.artist_set.map(function(artist) {
