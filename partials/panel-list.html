@@ -8,8 +8,8 @@
       </form>
     </div>
   </div>
-  <ul class="panels-list">
-    <li class="panel" ng-cloak ng-repeat="panel in panels.installed_panel_set | filter:search">
+  <ul class="panels-list" ng-cloak>
+    <li class="panel" ng-repeat="panel in panels.installed_panel_set | filter:search">
       <a ng-href="#/panels/{{panel.pnl_id | strip_panel_id}}">
           <img ng-src="{{panel.image}}" />
           <div class="panel-info">
@@ -22,6 +22,7 @@
           </div>
       </a>
     </li>
+    <li class="panel no-results">No panels found</li>
   </ul>
   <div class="main-links">
     <div class="main-nav">

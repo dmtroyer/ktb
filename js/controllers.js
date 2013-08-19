@@ -22,6 +22,7 @@ angular.module('ktb.controllers', []).
     Panel.get({panelId:$routeParams.panelId}, function(panel) {
       panel.image = panelImageUrl(panel.pnl_id);
       if (panel.story == null) { panel.story = defaultStory(panel.pnl_id.slice(-3)); }
+      _gaq.push(['_trackEvent', 'Panels', 'View', panel.pnl_id]);
       $scope.panel = panel;
     });
 
@@ -45,6 +46,7 @@ angular.module('ktb.controllers', []).
     $scope.submit = function () {
       $scope.search = this.search_input;
       $scope.search_input = this.search_input;
+      _gaq.push(['_trackEvent', 'Panels', 'Search', this.search_input]);
       $location.url('panels');
     };
   }]);
